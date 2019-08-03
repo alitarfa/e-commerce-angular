@@ -1,0 +1,30 @@
+<mat-toolbar>
+        <mat-toolbar-row class="toolbar-container">
+            <span>Admin Panel</span>
+            <span class="example-spacer"></span>
+            <i class="material-icons m-r-20"  matBadge="2" matBadgeColor="warn" mat-button [matMenuTriggerFor]="notificationMenu" >notifications_none</i>
+            <i class="material-icons m-r-20" matBadge="15">shopping_cart</i>
+            <img class="example-icon" src="../assets/5-1.png" width="50" mat-button [matMenuTriggerFor]="menu" />
+        </mat-toolbar-row>   
+  </mat-toolbar>
+  
+  <mat-menu #menu="matMenu">
+        <button mat-menu-item class="justif"> <i class="material-icons">account_circle</i> Profile</button>
+        <button mat-menu-item class="justif" ><i class="material-icons">settings</i>Setting</button>
+  </mat-menu>
+  
+  <mat-menu #notificationMenu="matMenu">
+      <mat-list >
+          
+        <mat-list-item class="line-notification-menu cur" *ngFor="let item of notificationList">
+              <img class="example-icon icon-notification-menu" src="../assets/5-1.png" width="40" /> 
+              <span class="text-notification-menu">you have search item from the left side of this page can you get it for me</span>
+          </mat-list-item>
+
+      </mat-list>
+
+      <div class="text-center">
+            <a href="#">Show all notification</a>
+      </div>
+     
+  </mat-menu>
