@@ -79,11 +79,13 @@
     height: 310px;
     width: 233px;
     margin: 6px;
+    flex: 0 0 auto;
   }
 
   .items-product {
-    padding: 10px;
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 
   .body-card {
@@ -108,4 +110,21 @@
     font-weight: bold;
     font-size: 18px;
   }
+
+  .item-category {
+    display: flex;
+    align-items: center;
+  }
+
+  .item-category i {
+    margin-right: 8px;
+  }
+
+  .item-category span {
+    color: #999999;
+  }
   
+
+  ::-webkit-scrollbar {
+    border: none;
+  }
