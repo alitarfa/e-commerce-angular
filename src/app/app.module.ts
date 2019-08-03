@@ -25,6 +25,8 @@ import {MatInputModule} from '@angular/material/input';
 import {RouterModule, Routes} from '@angular/router';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component'
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 /**
  * define the routes of this web application
@@ -52,6 +54,7 @@ import { HomeComponent } from './home/home.component'
     
   ],
   imports: [
+    MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(appRoute,{ enableTracing: false } ),
     BrowserModule,
     NgbModule,
