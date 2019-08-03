@@ -34,6 +34,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
  const appRoute = [
    {path : '' , component: MainComponent},
    {path : "signin" , component: SignInComponent},
+   {path : "signup", component: SignUpComponent},
    {path : 'home', component : HomeComponent}
  ]
 
