@@ -26,6 +26,10 @@ import {RouterModule, Routes} from '@angular/router';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component'
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CategoryDetailsComponent } from './category-details/category-details.component';
+import { ItemProductDetailsComponent } from './item-product-details/item-product-details.component';
+import { TrSliderComponent } from './tr-slider/tr-slider.component';
 
 
 /**
@@ -35,7 +39,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
    {path : '' , component: MainComponent},
    {path : "signin" , component: SignInComponent},
    {path : "signup", component: SignUpComponent},
-   {path : 'home', component : HomeComponent}
+   {path : 'home', component : HomeComponent},
+   {path : 'category', component: CategoryDetailsComponent}
  ]
 
 
@@ -52,6 +57,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     NotificationListComponent,
     NavBarComponent,
     HomeComponent,
+    CarouselComponent,
+    CategoryDetailsComponent,
+    ItemProductDetailsComponent,
+    TrSliderComponent,
     
   ],
   imports: [

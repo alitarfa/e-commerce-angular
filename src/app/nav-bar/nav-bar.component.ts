@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Notification} from '../model/notification';
+import { Category } from '../model/category';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -7,30 +8,35 @@ import {Notification} from '../model/notification';
 })
 export class NavBarComponent implements OnInit {
 
-  notificationList = new Array();
+  private categoryList = new Array();
 
   constructor() {
-    this.insertDumyData();
+    
    }
 
   ngOnInit() {  
-    this.notificationList.forEach( elem => {
-      console.log(elem);
-  });
+       // init the menu
+       this.getCategoryList();
   }
 
-  /**
-   * insert fake data
+   /**
+   * get list Category from service layer
    */
-  public insertDumyData = () => {
+  public getCategoryList = () => {
+    // call the service layer then invok the proper method 
 
-    let n1 = new Notification(1,"Microsoft TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript", "5-1.png");
-    let n2 = new Notification(1,"Microsoft TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript", "5-1.png");
-    let n3 = new Notification(1,"Microsoft TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript", "5-1.png");
+    // in this case we gonna just use dumy data to test the application
+    let c1 = new Category(1, "Computer","desktop_mac");
+    let c2 = new Category(2, "Computer","desktop_mac");
+    let c3 = new Category(3, "Computer","desktop_mac");
+    let c4 = new Category(4, "Computer","desktop_mac");
+    let c5 = new Category(5, "Computer","desktop_mac");
 
-    this.notificationList.push(n1);
-    this.notificationList.push(n2);
-    this.notificationList.push(n3);
+    this.categoryList.push(c1);
+    this.categoryList.push(c2);
+    this.categoryList.push(c3);
+    this.categoryList.push(c4);
+    this.categoryList.push(c5);
 
   }
 }

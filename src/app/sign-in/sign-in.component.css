@@ -5,6 +5,12 @@
     background: #fff;  
 }
 
+.icon-back {
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    cursor: pointer;
+}
 
 .info-sign-in {
     margin-left: 200px;
