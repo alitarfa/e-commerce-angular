@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryDetailsComponent implements OnInit {
 
+  private titleCategory = "Title Category";
+  panelOpenState = false;
+  
   constructor() { }
 
   ngOnInit() {

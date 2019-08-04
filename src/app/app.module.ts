@@ -30,6 +30,10 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CategoryDetailsComponent } from './category-details/category-details.component';
 import { ItemProductDetailsComponent } from './item-product-details/item-product-details.component';
 import { TrSliderComponent } from './tr-slider/tr-slider.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { TrFilterPanelComponent } from './tr-filter-panel/tr-filter-panel.component';
+import { TrCardHorComponent } from './tr-card-hor/tr-card-hor.component';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 /**
@@ -61,6 +65,8 @@ import { TrSliderComponent } from './tr-slider/tr-slider.component';
     CategoryDetailsComponent,
     ItemProductDetailsComponent,
     TrSliderComponent,
+    TrFilterPanelComponent,
+    TrCardHorComponent,
     
   ],
   imports: [
@@ -76,7 +82,10 @@ import { TrSliderComponent } from './tr-slider/tr-slider.component';
     MatSidenavModule,
     MatCardModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatExpansionModule,
+    MatChipsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
