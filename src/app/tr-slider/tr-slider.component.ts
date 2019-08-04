@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Product } from '../model/product';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-tr-slider',
@@ -7,14 +10,16 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class TrSliderComponent implements OnInit {
 
-
   @ViewChild('elemToScroll' , { static: false }) public widgetsContent: ElementRef<any>;
 
-  constructor() { }
+  private listItemProduct = new Array();
+
+  constructor(private router: Router) { 
+    this.getListItemProduct();
+  }
 
   ngOnInit() {
   }
-
 
   /**
    * Scroll to Right of Slider items
@@ -28,6 +33,26 @@ export class TrSliderComponent implements OnInit {
    */
   public scrollLeft(): void {
     this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft - 250), behavior: 'smooth' });
+  }
+
+  /**
+   * List item product of tr-slider component 
+   */
+  getListItemProduct = () => {
+    let p1 = new Product(1,"Acer R3", 4, "Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...", 800);
+
+    // push to list 
+    this.listItemProduct.push(p1);
+    this.listItemProduct.push(p1);
+    this.listItemProduct.push(p1);
+  }
+
+
+  /**
+   * Navigate to the Details page 
+   */
+  goToDetails = (id) => {
+    this.router.navigate(['/product', id]);
   }
 
 }

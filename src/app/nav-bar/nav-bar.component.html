@@ -11,8 +11,10 @@
                              </div>
                           
                              <span class="download-menu">Download App</span>
-                             <span class="auth-menu">Sign Up / Sign In</span>
-                        
+                             <span class="auth-menu" routerLink="/signin">Sign Up / Sign In</span>
+                             <i class="material-icons image-cofre">
+                                        shopping_cart
+                                        </i>
                         </mat-toolbar-row>    
                 </mat-toolbar>
         </div>
@@ -20,7 +22,7 @@
 
 
     <mat-menu #menu="matMenu">
-            <button mat-menu-item class="item-category" *ngFor="let item of categoryList">
+            <button (click)="goToCategory(item.id)" mat-menu-item class="item-category" *ngFor="let item of categoryList">
                   <i class="material-icons">{{item.icon}}</i>
                   <span>{{item.title}}</span>
             </button>

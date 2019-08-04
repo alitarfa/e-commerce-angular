@@ -40,11 +40,14 @@ import {MatChipsModule} from '@angular/material/chips';
  * define the routes of this web application
  */
  const appRoute = [
-   {path : '' , component: MainComponent},
+   
+   {path : '' , component: HomeComponent},
    {path : "signin" , component: SignInComponent},
    {path : "signup", component: SignUpComponent},
    {path : 'home', component : HomeComponent},
-   {path : 'category', component: CategoryDetailsComponent}
+   {path : 'category/:id', component: CategoryDetailsComponent},
+   {path: 'product/:id', component: ItemProductDetailsComponent}
+
  ]
 
 

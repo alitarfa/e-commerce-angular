@@ -1,5 +1,4 @@
-<div>
-        <div class="scroll-product-item">
+<div class="scroll-product-item">
             <div class="title-navigation-btn-product-item">
                 <span>Popular Products</span>
 
@@ -12,15 +11,14 @@
                                <i class="material-icons">keyboard_arrow_right</i>
                        </button>
                 </div>
-              
             </div>
 
         <div class="items-product" #elemToScroll>
-                <mat-card class="card-item-product">
+                <mat-card class="card-item-product cur" *ngFor="let item of listItemProduct" (click)="goToDetails(item.id)">
                     <div class="body-card">
                         <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                        <span>Acer Aspire R3</span>
-                        <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
+                        <span class="title-product">{{item.title}}</span>
+                        <p>{{item.desc}}</p>
                     </div>
 
                     <div class="price-ratting">
@@ -31,244 +29,9 @@
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                         </div>
-                        <span>8000 $</span>
+                        <span>{{item.price}} $</span>
                     </div>
-                   
                 </mat-card>
-
-                <mat-card class="card-item-product">
-                        <div class="body-card">
-                            <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                            <span>Acer Aspire R3</span>
-                            <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                        </div>
-    
-                        <div class="price-ratting">
-                            <div> 
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                            </div>
-                            <span>8000 $</span>
-                        </div>
-                       
-                    </mat-card>
-
-                    
-                    <mat-card class="card-item-product">
-                            <div class="body-card">
-                                <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                                <span>Acer Aspire R3</span>
-                                <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                            </div>
-        
-                            <div class="price-ratting">
-                                <div> 
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                </div>
-                                <span>8000 $</span>
-                            </div>
-                           
-                        </mat-card>
-
-                        
-
-                        <mat-card class="card-item-product">
-                                <div class="body-card">
-                                    <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                                    <span>Acer Aspire R3</span>
-                                    <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                                </div>
-            
-                                <div class="price-ratting">
-                                    <div> 
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                    </div>
-                                    <span>8000 $</span>
-                                </div>
-                               
-                            </mat-card>
-
-                            
-                            <mat-card class="card-item-product">
-                                    <div class="body-card">
-                                        <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                                        <span>Acer Aspire R3</span>
-                                        <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                                    </div>
-                
-                                    <div class="price-ratting">
-                                        <div> 
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                        </div>
-                                        <span>8000 $</span>
-                                    </div>
-                                   
-                                </mat-card>
-                
-                <mat-card class="card-item-product">
-                        <div class="body-card">
-                            <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                            <span>Acer Aspire R3</span>
-                            <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                        </div>
-    
-                        <div class="price-ratting">
-                            <div> 
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                            </div>
-                            <span>8000 $</span>
-                        </div>
-                       
-                    </mat-card>
-
-                    <mat-card class="card-item-product">
-                            <div class="body-card">
-                                <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                                <span>Acer Aspire R3</span>
-                                <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                            </div>
-        
-                            <div class="price-ratting">
-                                <div> 
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                </div>
-                                <span>8000 $</span>
-                            </div>
-                           
-                        </mat-card>
-
-                        <mat-card class="card-item-product">
-                                <div class="body-card">
-                                    <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                                    <span>Acer Aspire R3</span>
-                                    <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                                </div>
-            
-                                <div class="price-ratting">
-                                    <div> 
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                    </div>
-                                    <span>8000 $</span>
-                                </div>
-                               
-                            </mat-card>
-
-
-                            <mat-card class="card-item-product">
-                                    <div class="body-card">
-                                        <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                                        <span>Acer Aspire R3</span>
-                                        <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                                    </div>
-                
-                                    <div class="price-ratting">
-                                        <div> 
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                        </div>
-                                        <span>8000 $</span>
-                                    </div>
-                                   
-                                </mat-card>
-
-
-                                
-                            <mat-card class="card-item-product">
-                                    <div class="body-card">
-                                        <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                                        <span>Acer Aspire R3</span>
-                                        <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                                    </div>
-                
-                                    <div class="price-ratting">
-                                        <div> 
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                        </div>
-                                        <span>8000 $</span>
-                                    </div>
-                                   
-                                </mat-card>
-
-
-                            <mat-card class="card-item-product">
-                                    <div class="body-card">
-                                        <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                                        <span>Acer Aspire R3</span>
-                                        <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                                    </div>
-                
-                                    <div class="price-ratting">
-                                        <div> 
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                        </div>
-                                        <span>8000 $</span>
-                                    </div>
-                                   
-                                </mat-card>
-
-
-                            <mat-card class="card-item-product">
-                                    <div class="body-card">
-                                        <img src="../../assets/aspire.png" alt="mac" width = "100%">
-                                        <span>Acer Aspire R3</span>
-                                        <p>Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...</p>
-                                    </div>
-                
-                                    <div class="price-ratting">
-                                        <div> 
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                        </div>
-                                        <span>8000 $</span>
-                                    </div>
-                                   
-                                </mat-card>
-
-            
         </div>
-
-
         
-        </div>
-    </div>
+</div>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Notification} from '../model/notification';
 import { Category } from '../model/category';
+import {Router} from '@angular/router';
+
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -10,8 +13,7 @@ export class NavBarComponent implements OnInit {
 
   private categoryList = new Array();
 
-  constructor() {
-    
+  constructor(private router: Router) {
    }
 
   ngOnInit() {  
@@ -39,4 +41,14 @@ export class NavBarComponent implements OnInit {
     this.categoryList.push(c5);
 
   }
+
+  
+  /**
+   * to navigate to proper Category
+   */
+  public goToCategory = (id) => {
+    console.log(id);
+    this.router.navigate(['/category', id]);
+  }
+
 }
