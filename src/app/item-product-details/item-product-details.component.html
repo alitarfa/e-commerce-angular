@@ -26,12 +26,13 @@
 
                     <div class="btn-and-value">
                             <div class="command-value">
-                                    <span class="minus">-</span>
-                                    <span class="value">2</span>
-                                    <span class="plus">+</span>
-                                </div>
+                                    <span class="minus" (click)="decrease()">-</span>
+                                    <span class="value" #quntity>{{quntityValue}}</span>
+                                    <span class="plus" (click)="increase()">+</span>
+                                </div> 
             
-                                <button class="btn-add-to-bag">ADD TO BAG</button>            
+                                <button class="btn-add-to-bag" (click)="addToBag()">ADD TO BAG</button>  
+                                          
                     </div>
                  
                 </div>

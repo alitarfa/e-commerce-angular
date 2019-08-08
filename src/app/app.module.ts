@@ -24,7 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 // import route module
 import {RouterModule, Routes} from '@angular/router';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CategoryDetailsComponent } from './category-details/category-details.component';
@@ -34,21 +34,23 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { TrFilterPanelComponent } from './tr-filter-panel/tr-filter-panel.component';
 import { TrCardHorComponent } from './tr-card-hor/tr-card-hor.component';
 import {MatChipsModule} from '@angular/material/chips';
+import { ActionHandlerService } from './services/action-handler.service';
+import { ApiServiceService } from './services/api-service.service';
 
 
 /**
  * define the routes of this web application
  */
- const appRoute = [
-   
+const appRoute = [
+
    {path : '' , component: HomeComponent},
-   {path : "signin" , component: SignInComponent},
-   {path : "signup", component: SignUpComponent},
+   {path : 'signin' , component: SignInComponent},
+   {path : 'signup', component: SignUpComponent},
    {path : 'home', component : HomeComponent},
    {path : 'category/:id', component: CategoryDetailsComponent},
    {path: 'product/:id', component: ItemProductDetailsComponent}
 
- ]
+ ];
 
 
 
@@ -70,11 +72,11 @@ import {MatChipsModule} from '@angular/material/chips';
     TrSliderComponent,
     TrFilterPanelComponent,
     TrCardHorComponent,
-    
+
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
-    RouterModule.forRoot(appRoute,{ enableTracing: false } ),
+    RouterModule.forRoot(appRoute, { enableTracing: false } ),
     BrowserModule,
     NgbModule,
     MatToolbarModule,
@@ -88,9 +90,9 @@ import {MatChipsModule} from '@angular/material/chips';
     MatInputModule,
     MatExpansionModule,
     MatChipsModule
-    
+
   ],
-  providers: [],
+  providers: [ActionHandlerService, ApiServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Product} from '../model/product';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-tr-card-hor',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrCardHorComponent implements OnInit {
 
-  constructor() { }
+  @Input() product: Product;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+
+  /**
+   * to Open the product details
+   * @param id
+   */
+  onDetailsProduct = (id) => {
+    this.router.navigate(['/product', id]);
   }
 
 }

@@ -1,24 +1,24 @@
 <div class="row main-card-item-product">
     <div class="col-8">
-            <mat-card class="card-item-product cur" routerLink="/product/2">
+            <mat-card class="card-item-product cur" (click)="onDetailsProduct(product.id)">
 
                 <div class="section-one-product">
                         <div class="image-product"></div>
                         <div class="info-product">
-                           <span class="title-product">Title Product</span>
+                           <span class="title-product">{{product.title}}</span>
                            <div class="new-item">
                                 <mat-chip-list aria-label="Fish selection">
                                         <mat-chip color="primary" selected>new</mat-chip>
                                       </mat-chip-list>
                            </div>
                            <div class="desc-item">
-                               <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                               <p>{{product.desc}}</p>
                            </div>
                         </div>
                 </div>
                
                 <div class="section-two-product">
-                    <div class="price">1200 $</div>
+                    <div class="price">{{product.price}} $</div>
                      
                     <div class="rating">
                             <div> 

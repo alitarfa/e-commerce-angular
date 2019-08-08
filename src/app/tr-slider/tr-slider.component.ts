@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Product } from '../model/product';
 import { Router } from '@angular/router';
+import {ApiServiceService} from '../services/api-service.service';
 
+
+// todo fix the expanded text problem of each item
 
 @Component({
   selector: 'app-tr-slider',
@@ -11,10 +14,9 @@ import { Router } from '@angular/router';
 export class TrSliderComponent implements OnInit {
 
   @ViewChild('elemToScroll' , { static: false }) public widgetsContent: ElementRef<any>;
+  private listItemProduct = new Array<Product>();
 
-  private listItemProduct = new Array();
-
-  constructor(private router: Router) { 
+  constructor(private router: Router, private api: ApiServiceService) {
     this.getListItemProduct();
   }
 
@@ -36,20 +38,15 @@ export class TrSliderComponent implements OnInit {
   }
 
   /**
-   * List item product of tr-slider component 
+   * List item product of tr-slider component
    */
   getListItemProduct = () => {
-    let p1 = new Product(1,"Acer R3", 4, "Core i5 (8 GB/128 GB SSD/OS X Retina RMF ...", 800);
-
-    // push to list 
-    this.listItemProduct.push(p1);
-    this.listItemProduct.push(p1);
-    this.listItemProduct.push(p1);
+    this.listItemProduct = this.api.getProducts();
   }
 
 
   /**
-   * Navigate to the Details page 
+   * Navigate to the Details page
    */
   goToDetails = (id) => {
     this.router.navigate(['/product', id]);
