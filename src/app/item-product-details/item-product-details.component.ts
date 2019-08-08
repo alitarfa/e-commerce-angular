@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../model/product';
+import {ActionHandlerService} from '../services/action-handler.service';
 
 @Component({
   selector: 'app-item-product-details',
@@ -8,27 +9,27 @@ import { Product } from '../model/product';
 })
 export class ItemProductDetailsComponent implements OnInit {
 
-  private listImageProduct = new Array();
+  private listImageProduct = new Array<string>();
   private wishList = new Array<Product>();
   private quntityValue = 1;
   private currentProduct: Product;
 
 
-  constructor() { }
+  constructor(private actionHandler: ActionHandlerService) { }
 
   ngOnInit() {
   }
 
 
   /**
-   * to call the service layer to get the details info of current item product 
+   * to call the service layer to get the details info of current item product
    */
   getProductDetails = () => {
-    // just i will use dumy data to test 
+    // just i will use dumy data to test
 
     // by using the id of the product we fetch all its details
 
-    // use its id to add it to the wishList 
+    // use its id to add it to the wishList
   }
 
 
@@ -38,31 +39,32 @@ export class ItemProductDetailsComponent implements OnInit {
   increase = () => {
     this.quntityValue = this.quntityValue + 1;
     console.log(this.quntityValue);
-    // update the GUI 
+    // update the GUI
   }
 
   /**
    * handle value by decrease 1
    */
   decrease = () => {
-    if(this.quntityValue > 1) {
+    if (this.quntityValue > 1) {
     this.quntityValue = this.quntityValue - 1;
     console.log(this.quntityValue);
     // update the GUI
     }
   }
 
-
   /**
-   * to add the current item to The BAG 
+   * to add the current item to The BAG
    */
   addToBag = () => {
-    // add to list wish list 
+    // add to list wish list
 
-    // update the badge icon number 
+    // update the badge icon number
 
-    // put it into a global store or pass it to the proper component 
+    // put it into a global store or pass it to the proper component
 
+    // send product id
+    this.actionHandler.onAddItemToBag(1);
   }
 
 }

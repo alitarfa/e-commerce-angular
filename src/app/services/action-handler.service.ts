@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ActionHandlerService {
 
-  private messageSource = new BehaviorSubject('');
+  private messageSource = new BehaviorSubject(0);
   currentMessage = this.messageSource.asObservable();
   
   constructor() { }
