@@ -89,4 +89,23 @@
 .title-product {
     font-weight: bold;
 }
- 
+
+.slider {
+margin-bottom: 20px;
+}
+
+.content-image-slider {
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+
+}
+
+.parent-slider-product {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

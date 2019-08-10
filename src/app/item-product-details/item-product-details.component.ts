@@ -13,11 +13,13 @@ export class ItemProductDetailsComponent implements OnInit {
   private wishList = new Array<Product>();
   private quntityValue = 1;
   private currentProduct: Product;
+  private imageTest = '../../assets/aspire.png';
 
 
   constructor(private actionHandler: ActionHandlerService) { }
 
   ngOnInit() {
+    this.listImageProduct.push(this.imageTest);
   }
 
 
@@ -31,7 +33,6 @@ export class ItemProductDetailsComponent implements OnInit {
 
     // use its id to add it to the wishList
   }
-
 
   /**
    * handle value by increase 1
@@ -51,7 +52,7 @@ export class ItemProductDetailsComponent implements OnInit {
     console.log(this.quntityValue);
     // update the GUI
     }
-  }
+  };
 
   /**
    * to add the current item to The BAG

@@ -36,6 +36,9 @@ import { TrCardHorComponent } from './tr-card-hor/tr-card-hor.component';
 import {MatChipsModule} from '@angular/material/chips';
 import { ActionHandlerService } from './services/action-handler.service';
 import { ApiServiceService } from './services/api-service.service';
+import {SlideshowModule} from 'ng-simple-slideshow';
+import { FooterComponent } from './footer/footer.component';
+import { ReactiveFormsModule} from '@angular/forms';
 
 
 /**
@@ -72,6 +75,7 @@ const appRoute = [
     TrSliderComponent,
     TrFilterPanelComponent,
     TrCardHorComponent,
+    FooterComponent,
 
   ],
   imports: [
@@ -89,7 +93,9 @@ const appRoute = [
     MatButtonModule,
     MatInputModule,
     MatExpansionModule,
-    MatChipsModule
+    MatChipsModule,
+    SlideshowModule,
+    ReactiveFormsModule
 
   ],
   providers: [ActionHandlerService, ApiServiceService],

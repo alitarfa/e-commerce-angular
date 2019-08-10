@@ -1,18 +1,29 @@
 <div class="container-fluid">
-        <app-nav-bar></app-nav-bar>
 
-        <div class="row" style="height:700px;">
-            <div class="col">
-                <div class="image-product">
-                    <img src="../../assets/aspire.png" alt="">
-                    <div class="list-image-product">
-                             <img class="image-product-item-details" width="70" src="../../assets/aspire.png" alt="">
-                             <img class="image-product-item-details" width="70" src="../../assets/aspire.png" alt="">
-                             <img class="image-product-item-details" width="70" src="../../assets/aspire.png" alt="">
-                             <img class="image-product-item-details" width="70" src="../../assets/aspire.png" alt="">
-                              
-                    </div>
-                </div>
+  <app-nav-bar></app-nav-bar>
+
+
+
+
+
+  <div class="row" style="height:700px;">
+            <div class="col parent-slider-product">
+              <div class="content-image-slider">
+                <slideshow class="slider" [height]="'300px'"
+                           [autoPlay]="true"
+                           [showArrows]="true"
+                           [imageUrls]="listImageProduct"
+                           [autoPlayWaitForLazyLoad]="true"
+                           [backgroundSize]="cover"
+                >
+                </slideshow>
+
+              </div>
+
+              <div class="list-image-product">
+               <!-- <img class="image-product-item-details" *ngFor="let item of listImageProduct" width="70" src="{{item.}}" alt="" >-->
+              </div>
+
             </div>
 
          
