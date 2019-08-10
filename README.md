@@ -12,4 +12,6 @@
 
 <img src="https://github.com/alitarfa/e-commerce-angular/blob/master/images/Screenshot%20from%202019-08-03%2017-55-15.png" /> 
 
-<img src="https://github.com/alitarfa/e-commerce-angular/blob/master/images/Screenshot%20from%202019-08-04%2011-34-59.png" />
+<img src="https://github.com/alitarfa/e-commerce-angular/blob/master/images/Screenshot%20from%202019-08-10%2023-36-00.png" />
+
+<img src="https://github.com/alitarfa/e-commerce-angular/blob/master/images/Screenshot%20from%202019-08-10%2022-50-30.png" />
