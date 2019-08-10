@@ -39,6 +39,7 @@ import { ApiServiceService } from './services/api-service.service';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule} from '@angular/forms';
+import { PaginationComponentComponent } from './pagination-component/pagination-component.component';
 
 
 /**
@@ -76,6 +77,7 @@ const appRoute = [
     TrFilterPanelComponent,
     TrCardHorComponent,
     FooterComponent,
+    PaginationComponentComponent,
 
   ],
   imports: [
